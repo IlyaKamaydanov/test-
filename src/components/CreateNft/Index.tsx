@@ -36,7 +36,7 @@ const CreateNft = () => {
         <img className={s.imgLeft} src="././img/LeftIMG.png" alt="IMG" />
         <img className={s.imgRight} src="././img/RightIMG.png" alt="IMG" />
         <img className={s.arrow} src="././img/Arrow.svg" alt="IMG" />
-        <img className={s.grid} src="././img/Grid.png" alt="IMG" />
+        <img className={s.grid} src="././img/Grid.svg" alt="IMG" />
       </div>
     </div>
   );

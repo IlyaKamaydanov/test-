@@ -23,6 +23,9 @@
   text-transform: capitalize;
   color: #141416;
   width: 567px;
+  opacity: 0;
+  animation: arrow 10s;
+  animation-fill-mode: forwards;
 }
 
 .text {
@@ -32,6 +35,10 @@
   line-height: 156%;
   color: #676767;
   width: 491px;
+  opacity: 0;
+  animation: arrow 10s;
+  animation-delay: 300ms;
+  animation-fill-mode: forwards;
 }
 
 .bonus {
@@ -43,6 +50,19 @@
   display: flex;
   gap: 22px;
   margin-top: 44px;
+  opacity: 0;
+  animation: arrow 10s;
+  animation-delay: 600ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes arrow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes imageLeft {
@@ -63,15 +83,23 @@
   }
 }
 
-@keyframes arrow {
+@keyframes grid {
   from {
     left: 130%;
   }
   to {
-    left: 17%;
+    left: 730px;
   }
 }
 
+.grid {
+  position: relative;
+  display: block;
+  top: -1050px;
+  left: 730px;
+  z-index: 0;
+  animation: grid 15s;
+}
 .imgLeft {
   position: relative;
   top: -50px;
@@ -83,29 +111,27 @@
   top: -400px;
   right: -485px;
   animation: imageRight 15s;
+  z-index: 2;
 }
 
 .arrow {
+  animation: arrow 15s;
+  animation-delay: 11s;
   position: relative;
+  opacity: 0;
   top: -830px;
   left: 130px;
-  animation: arrow 15s;
+  animation-fill-mode: forwards;
 }
-
-.grid {
-  position: relative;
-  top: -900px;
-}
-
-// .img {
-//   position: relative;
-//   animation: image 15s;
-// }
 
 .statistics {
   display: flex;
   gap: 60px;
   margin-top: 81px;
+  opacity: 0;
+  animation: arrow 10s;
+  animation-delay: 900ms;
+  animation-fill-mode: forwards;
 }
 
 .statTitle {
