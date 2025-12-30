@@ -2,7 +2,7 @@ import s from "./Button.module.scss";
 
 interface ButtonType {
   title: string;
-  variant: "header" | "create" | "explore";
+  variant: "header" | "create" | "explore" | "explore2" | "sell";
 }
 
 const Button = ({ title, variant }: ButtonType) => {
@@ -15,7 +15,11 @@ const Button = ({ title, variant }: ButtonType) => {
             ? s.createButton
             : variant === "explore"
               ? s.exploreButton
-              : undefined
+              : variant === "explore2"
+                ? s.explore2
+                : variant === "sell"
+                  ? s.sell
+                  : undefined
       }
     >
       {title}

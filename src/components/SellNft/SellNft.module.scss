@@ -1,0 +1,43 @@
+.background {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  border-radius: 30px;
+  width: 1246px;
+
+  margin: 0 97px;
+  padding: 66px 48px;
+}
+
+.info {
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 45px;
+  margin: 0;
+  padding: 0;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 20px;
+  color: #d4d4d4;
+  opacity: 0.6;
+  margin: 0;
+  padding: 0;
+}
+
+.createSell {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.buttons {
+  margin-top: 37px;
+  display: flex;
+  gap: 24px;
+}

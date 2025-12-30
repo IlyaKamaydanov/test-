@@ -75,3 +75,45 @@
   background-color: #d7d7d7;
   color: black;
 }
+
+.explore2 {
+  border: 2px solid #fff;
+  border-radius: 12px;
+  width: 180px;
+  height: 68px;
+  background-color: white;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 21px;
+  color: black;
+  cursor: pointer;
+  transition:
+    color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+}
+
+.explore2:hover {
+  color: white;
+  background-color: black;
+}
+
+.sell {
+  border: 2px solid #fff;
+  border-radius: 12px;
+  width: 180px;
+  height: 68px;
+  background-color: black;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 21px;
+  color: #fff;
+  cursor: pointer;
+  transition:
+    color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+}
+
+.sell:hover {
+  color: black;
+  background-color: white;
+}

@@ -1,11 +1,13 @@
-import { CreateNft } from "./components/CreateNft/Index";
 import { Header } from "./components/Header/Index";
+import { Info } from "./components/Info/Index";
+import { SellNft } from "./components/SellNft/Index";
 
 function App() {
   return (
     <div>
       <Header />
-      <CreateNft />
+      <Info />
+      <SellNft />
     </div>
   );
 }

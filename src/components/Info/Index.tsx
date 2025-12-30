@@ -1,7 +1,7 @@
 import { Button } from "../Button/Index";
-import s from "./CreateNft.module.scss";
+import s from "./Info.module.scss";
 
-const CreateNft = () => {
+const Info = () => {
   return (
     <div className={s.container}>
       <div className={s.discoverCreate}>
@@ -42,4 +42,4 @@ const CreateNft = () => {
   );
 };
 
-export { CreateNft };
+export { Info };
