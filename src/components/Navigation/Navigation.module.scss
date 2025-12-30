@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  gap: 66px;
+}
+
+.navItem {
+  text-decoration: none;
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.link {
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #606060;
+  transition:
+    color 0.3s ease-in-out,
+    border-bottom 0.3s ease-in-out;
+}
+
+.link:hover {
+  color: black;
+  border-bottom: 2px solid black;
+}
