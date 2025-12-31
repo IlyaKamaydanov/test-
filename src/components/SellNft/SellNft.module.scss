@@ -3,10 +3,8 @@
   justify-content: space-between;
   background-color: black;
   border-radius: 30px;
-  width: 1246px;
-
   margin: 0 97px;
-  padding: 66px 48px;
+  padding: 48px 31px 48px 66px;
 }
 
 .info {
@@ -40,4 +38,8 @@
   margin-top: 37px;
   display: flex;
   gap: 24px;
+}
+
+.container {
+  margin: 5px 0 120px 0;
 }

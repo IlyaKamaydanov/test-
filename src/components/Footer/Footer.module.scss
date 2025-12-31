@@ -1,0 +1,67 @@
+.container {
+  background-color: black;
+  color: white;
+  padding: 0 97px;
+}
+
+.miniContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 88px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #818181;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.links {
+  display: flex;
+  gap: 70px;
+  font-family: "Inter", sans-serif;
+  align-items: center;
+}
+
+.link {
+  color: #b9b9b9;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 17px;
+  transition: color 0.3s ease-in-out;
+}
+
+.link:hover {
+  color: white;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: #999;
+  margin-top: 56px;
+  padding-bottom: 86px;
+}
+
+.socialIcon {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.soc {
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s ease-in-out;
+}
+
+.soc:hover {
+  border-bottom: 1px solid #999;
+}
