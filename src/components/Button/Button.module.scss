@@ -28,7 +28,6 @@
   box-sizing: border-box;
   border: 2px solid #000;
   border-radius: 12px;
-  padding: 18px 21px;
   width: 140px;
   height: 60px;
   font-family: "Poppins", sans-serif;
@@ -116,4 +115,23 @@
 .sell:hover {
   color: black;
   background-color: white;
+}
+
+@media (max-width: 1024px) {
+  .button {
+    width: 140px;
+    height: 40px;
+    font-weight: 600;
+    font-size: 11px;
+    border-radius: 12px;
+  }
+
+  .exploreButton,
+  .createButton {
+    width: 130px;
+    height: 42px;
+    border-radius: 9px;
+    font-weight: 500;
+    font-size: 11px;
+  }
 }

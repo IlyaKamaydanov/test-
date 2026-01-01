@@ -11,7 +11,7 @@ const Navigation = () => {
   return (
     <div className={s.container}>
       <a href="#">
-        <img src="././img/logo.svg" />
+        <img className={s.logo} src="././img/logo.svg" />
       </a>
       <ul className={s.navItem}>
         {NAVIGATIONITEM.map((item, index) => (

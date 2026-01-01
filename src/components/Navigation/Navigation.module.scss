@@ -29,3 +29,24 @@
   color: black;
   border-bottom: 2px solid black;
 }
+
+@media (max-width: 1024px) {
+  .navItem {
+    gap: 32px;
+  }
+
+  .container {
+    gap: 49px;
+    align-items: center;
+  }
+
+  .link {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .logo {
+    width: 38px;
+    height: 38px;
+  }
+}

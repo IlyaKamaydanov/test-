@@ -6,3 +6,10 @@
   margin-top: 45px;
   height: 54px;
 }
+
+@media (max-width: 1024px) {
+  .container {
+    margin-top: 32px;
+    padding: 0 67px;
+  }
+}

@@ -28,6 +28,7 @@
 }
 
 .text {
+  margin: 0;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -69,16 +70,16 @@
     left: 101%;
   }
   to {
-    left: 0%;
+    left: 10%;
   }
 }
 
 @keyframes imageRight {
   from {
-    left: 120%;
+    left: 1050px;
   }
   to {
-    left: 65%;
+    left: 550px;
   }
 }
 
@@ -87,30 +88,35 @@
     left: 130%;
   }
   to {
-    left: 730px;
+    left: 720px;
   }
 }
 
 .grid {
   position: relative;
   display: block;
-  top: -1050px;
-  left: 730px;
+  top: -750px;
+  left: 720px;
   z-index: 0;
   animation: grid 15s;
+  width: 173px;
+  height: 400px;
 }
 .imgLeft {
   position: relative;
-  top: -50px;
   animation: imageLeft 15s;
+  animation-fill-mode: forwards;
 }
 
 .imgRight {
   position: relative;
-  top: -400px;
-  right: -485px;
+  top: -220px;
+  right: 100px;
+  width: 400px;
+  height: 320px;
   animation: imageRight 15s;
   z-index: 2;
+  animation-fill-mode: forwards;
 }
 
 .arrow {
@@ -118,8 +124,8 @@
   animation-delay: 11s;
   position: relative;
   opacity: 0;
-  top: -830px;
-  left: 130px;
+  top: -550px;
+  left: 90px;
   animation-fill-mode: forwards;
 }
 
@@ -149,4 +155,115 @@
   font-weight: 500;
   font-size: 12px;
   color: #848586;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 88px 67px;
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 54px;
+    width: 350px;
+  }
+
+  .text {
+    font-weight: 400;
+    font-size: 13px;
+    width: 350px;
+  }
+
+  .info {
+    gap: 15px;
+  }
+
+  .buttons {
+    margin-top: 36px;
+  }
+
+  .statistics {
+    gap: 40px;
+    margin-top: 58px;
+  }
+
+  .statTitle {
+    font-weight: 600;
+    font-size: 26px;
+  }
+
+  .statText {
+    font-weight: 500;
+    font-size: 9px;
+  }
+
+  @keyframes imageLeft {
+    from {
+      left: 130%;
+    }
+    to {
+      left: 80px;
+    }
+  }
+
+  @keyframes imageRight {
+    from {
+      left: 100%;
+    }
+    to {
+      left: 105px;
+    }
+  }
+
+  @keyframes grid {
+    from {
+      left: 140%;
+    }
+    to {
+      left: 500px;
+    }
+  }
+
+  @keyframes arrow {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .imgLeft {
+    width: 280px;
+    height: 280px;
+    animation: imageLeft 15s;
+    animation-fill-mode: forwards;
+  }
+
+  .imgRight {
+    box-sizing: content-box;
+    width: 230px;
+    height: 230px;
+    animation: imageRight 15s;
+    animation-fill-mode: forwards;
+    top: 70px;
+  }
+
+  .grid {
+    animation: grid 15s;
+    animation-fill-mode: forwards;
+    top: -400px;
+    width: 123px;
+    height: 284px;
+  }
+
+  .arrow {
+    animation: arrow 15s;
+    top: -260px;
+    left: 380px;
+    width: 91px;
+    height: 88px;
+    animation-delay: 11s;
+    animation-fill-mode: forwards;
+  }
 }
