@@ -1,0 +1,59 @@
+.slide {
+  margin: 0;
+}
+
+.container {
+  background-color: #f1f1f1;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 50px;
+}
+
+.title {
+  margin: 0;
+  padding: 70px 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 32px;
+  color: #c5c5c5;
+}
+
+.arrow {
+  width: 24px;
+  height: 24px;
+}
+
+.buttons {
+  width: 166px;
+  height: 64px;
+  background-color: #fff;
+  border-radius: 13px;
+  margin: 0 auto;
+  padding: 15px 21px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.next,
+.prev {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  padding: 0;
+  height: 24px;
+  margin: auto 0;
+}
+
+.prev::after {
+  content: "";
+  background-color: #e6e8ec;
+  border-radius: 2px;
+  width: 2px;
+  height: 24px;
+  display: block;
+  position: relative;
+  top: -27px;
+  left: 42.5px;
+  cursor: auto;
+}

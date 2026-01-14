@@ -5,6 +5,10 @@
   height: 600px;
 }
 
+.mobileInfo {
+  display: none;
+}
+
 .info {
   display: flex;
   flex-direction: column;
@@ -160,6 +164,11 @@
 @media (max-width: 1024px) {
   .container {
     padding: 88px 67px;
+    height: 390px;
+  }
+
+  .mobileInfo {
+    display: none;
   }
 
   .title {
@@ -264,6 +273,134 @@
     width: 91px;
     height: 88px;
     animation-delay: 11s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    padding: 0 30px;
+    width: 315px;
+    flex-direction: column;
+    height: 841px;
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 48px;
+    text-align: center;
+    line-height: 113%;
+    width: 315px;
+  }
+
+  .text {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 161%;
+    text-align: center;
+    width: 315px;
+  }
+
+  .buttons {
+    gap: 17px;
+    justify-content: center;
+    margin-top: 41px;
+  }
+
+  .mobileInfo {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    color: #201f1f;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .line {
+    border: 1px solid #201f1f;
+    width: 33px;
+    height: 0px;
+    margin: auto 0;
+  }
+
+  .statistics {
+    margin-bottom: 105px;
+  }
+
+  .imgBlock {
+    display: flex;
+  }
+  @keyframes imgLeft {
+    from {
+      left: 130%;
+    }
+    to {
+      left: 0px;
+    }
+  }
+
+  .imgLeft {
+    width: 210px;
+    height: 210px;
+    animation: imgLeft 15s;
+  }
+
+  @keyframes imgRight {
+    from {
+      left: 130%;
+    }
+    to {
+      left: 20px;
+    }
+  }
+
+  .imgRight {
+    top: 100px;
+    width: 170px;
+    height: 170px;
+    animation: imgRight 15s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes arrow {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .arrow {
+    opacity: 0;
+    width: 58px;
+    height: 56px;
+    animation: arrow 15s;
+    animation-delay: 12s;
+    animation-fill-mode: forwards;
+    top: 30px;
+    left: -140px;
+  }
+
+  @keyframes grid {
+    from {
+      left: 130%;
+    }
+    to {
+      left: -120px;
+    }
+  }
+
+  .grid {
+    all: initial;
+    position: relative;
+    top: -5px;
+    right: 120px;
+    width: 93px;
+    height: 213px;
+    animation: grid 15s;
     animation-fill-mode: forwards;
   }
 }

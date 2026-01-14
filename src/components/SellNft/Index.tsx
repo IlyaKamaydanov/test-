@@ -16,12 +16,8 @@ const SellNft = () => {
           </div>
         </div>
 
-        <img
-          src="././img/SellNft.png"
-          alt="sell NFT"
-          width="369"
-          height="249"
-        />
+        <img src="././img/SellNft.png" alt="sell NFT" className={s.img} />
+        <img src="././img/long.png" alt="sell NFT" className={s.imgLong} />
       </div>
     </div>
   );

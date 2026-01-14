@@ -30,7 +30,19 @@
   border-bottom: 2px solid black;
 }
 
+.mobileNav {
+  display: none;
+}
+
+.mobileTitle {
+  display: none;
+}
+
 @media (max-width: 1024px) {
+  .mobileNav {
+    display: none;
+  }
+
   .navItem {
     gap: 32px;
   }
@@ -48,5 +60,74 @@
   .logo {
     width: 38px;
     height: 38px;
+  }
+
+  .mobileTitle {
+    display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .navItem {
+    display: none;
+  }
+
+  .logo {
+    width: 46px;
+    height: 46px;
+  }
+
+  .mobileNav {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  .line {
+    border-bottom: 2px solid black;
+    width: 31.5px;
+  }
+
+  .container {
+    justify-content: space-between;
+    width: 315px;
+    margin-bottom: 72px;
+  }
+
+  .mobileTitle {
+    display: block;
+  }
+
+  .logoLink {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .mobileClose {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    width: 18px;
+    height: 18px;
+  }
+  .lineCloseLeft {
+    border-bottom: 2px solid black;
+    position: relative;
+    transform: rotate(45deg);
+    top: 7.8px;
+    width: 18px;
+  }
+  .lineCloseRight {
+    position: relative;
+    border-bottom: 2px solid black;
+    transform: rotate(-45deg);
+    top: -5px;
+    width: 18px;
   }
 }

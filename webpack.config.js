@@ -21,6 +21,33 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(css)$/, // Обрабатываем .scss и .css
+        use: [
+          "style-loader", // 3. Инжектирует в DOM (последний в очереди)
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+            },
+          },
+          "sass-loader", // 1. Компилирует SCSS -> CSS
+        ],
+      },
+      // {
+      //   test: /\.css$/,
+      //   exclude: /node_modules/,
+      //   use: [
+      //     { loader: "style-loader" },
+      //     {
+      //       loader: "css-loader",
+      //       options: {
+      //         modules: true,
+      //       },
+      //     },
+      //     { loader: "sass-loader" },
+      //   ],
+      // },
+      {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         use: ["ts-loader"],
@@ -48,7 +75,16 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".*", ".ts", ".tsx", ".js", ".jsx", ".scss", ".module.scss"],
+    extensions: [
+      ".*",
+      ".ts",
+      ".tsx",
+      ".js",
+      ".jsx",
+      ".scss",
+      ".module.scss",
+      ".css",
+    ],
   },
   plugins: [
     new BundleAnalyzerPlugin(),

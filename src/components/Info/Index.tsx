@@ -6,6 +6,9 @@ const Info = () => {
     <div className={s.container}>
       <div className={s.discoverCreate}>
         <div className={s.info}>
+          <p className={s.mobileInfo}>
+            <span className={s.line}></span>OVER 1M CREATORS
+          </p>
           <h1 className={s.title}>Discover And Create NFTs</h1>
           <p className={s.text}>
             Discover, Create and Sell NFTs On Our NFT Marketplace With Over
