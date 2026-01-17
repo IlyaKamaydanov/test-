@@ -1,25 +1,26 @@
 .container {
   display: flex;
   justify-content: space-between;
-  padding: 0 97px;
+  padding: 20px 97px;
   font-family: "Inter", sans-serif;
-  margin-top: 45px;
-  height: 54px;
+
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  align-items: center;
 }
 
 @media (max-width: 1024px) {
   .container {
-    margin-top: 32px;
     padding: 0 67px;
-    height: 40px;
   }
 }
 
 @media (max-width: 375px) {
   .container {
-    margin-top: 30px;
     padding: 0 30px;
-    height: auto;
-    width: 315px;
   }
 }

@@ -26,16 +26,14 @@ const SOCIALICONS = [
   { link: "www.twitter.com", img: "././img/twBlack.svg", alt: "tw" },
 ];
 
-const MobileNav = ({ show, nav }: MobileNavType) => {
-  console.log(show);
-
+const MobileNav = ({ show, nav, close }: MobileNavType) => {
   return (
-    <div className={show ? s.container : s.none}>
+    <div className={show ? s.container : s.reverse}>
       <>
         <ul className={s.navItem}>
           {nav.map((item, index) => (
             <li key={index}>
-              <a className={s.link} href={item.link}>
+              <a className={s.link} href={item.link} onClick={close}>
                 {item.title}
               </a>
             </li>
@@ -44,7 +42,7 @@ const MobileNav = ({ show, nav }: MobileNavType) => {
       </>
       <ul className={s.socIcon}>
         {SOCIALICONS.map((item, index) => (
-          <li key={index}>
+          <li key={index} className={s.socLink}>
             <a href={item.link}>
               <img src={item.img} alt={item.alt} />
             </a>

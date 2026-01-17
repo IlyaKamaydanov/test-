@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper as SwiperType } from "swiper";
 import { Slide } from "../../Slide/Index";
+import { useWindowWidth } from "@react-hook/window-size";
 
 interface todosType {
   id: string;
@@ -25,10 +26,13 @@ const allIMG: string[] = [];
 
 const Slider = () => {
   const [data, setData] = useState<todosType[]>([]);
+  const [error, setError] = useState();
 
   for (let i = 0; i < data.length; i++) {
     allIMG.push(...IMG);
   }
+
+  error === undefined ? null : console.log(error);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -36,13 +40,13 @@ const Slider = () => {
           "https://api.coingecko.com/api/v3/nfts/list"
         );
         if (!response.ok) {
-          // Проверяем HTTP-статус
-          throw new Error(`HTTP error! status: ${response.status}`);
+          throw new Error(`Ошибка: ${response.status}`);
         }
+
         const result = await response.json();
         setData(result);
-      } catch {
-        <div>lol</div>;
+      } catch (error: any) {
+        setError(error.message);
       }
     };
 
@@ -61,14 +65,21 @@ const Slider = () => {
     swiperRef.current?.slidePrev();
   };
 
+  const [slideNumber, setSlideNumber] = useState(5);
+
+  const size = useWindowWidth();
+
+  useEffect(() => {
+    size <= 385 ? setSlideNumber(slideNumber - 4) : slideNumber;
+  }, []);
+
   return (
-    <div className={s.container}>
+    <div className={s.container} id="slider">
       <h2 className={s.title}>Weekly - Top NFT</h2>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={10}
-        slidesPerView={5}
-        onSlideChange={() => console.log("slide change")}
+        slidesPerView={slideNumber}
         onSwiper={(swiper: any) => (swiperRef.current = swiper)}
         navigation={{
           nextEl: s.next,

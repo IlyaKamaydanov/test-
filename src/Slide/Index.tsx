@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "../components/Button/Index";
 import s from "./Slide.module.scss";
-import { Timer } from "../components/Timer/Index";
 
 interface SlideType {
   title: string;
@@ -21,7 +20,6 @@ const Slide = ({ title, img }: SlideType) => {
   return (
     <div className={s.container}>
       <div>
-        <Timer targetDate={10000} />
         <img src={img} alt="ig" className={s.img} />
         <p className={s.title}>{title}</p>
         <div className={s.currentAndButton}>

@@ -5,9 +5,9 @@ import { MobileNav } from "../MobileNav/Index";
 import ReactDOM from "react-dom";
 
 const NAVIGATIONITEM = [
-  { title: "discover", link: "#" },
+  { title: "discover", link: "#info" },
   { title: "creators", link: "#" },
-  { title: "sell", link: "#" },
+  { title: "sell", link: "#slider" },
   { title: "stats", link: "#" },
 ];
 
@@ -18,9 +18,13 @@ const Navigation = () => {
     setNav(!nav);
   };
 
+  const close = () => {
+    setNav(false);
+  };
+
   return (
     <div className={s.container}>
-      <a href="#" className={s.logoLink}>
+      <a href="#info" className={s.logoLink}>
         <img className={s.logo} src="././img/logo.svg" alt="logo" />
         <span className={s.mobileTitle}>DiveSea</span>
       </a>
@@ -39,7 +43,7 @@ const Navigation = () => {
       )}
 
       {ReactDOM.createPortal(
-        <MobileNav show={nav} nav={NAVIGATIONITEM} />,
+        <MobileNav show={nav} nav={NAVIGATIONITEM} close={close} />,
         document.body
       )}
 

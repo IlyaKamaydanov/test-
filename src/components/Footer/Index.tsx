@@ -19,13 +19,15 @@ const Footer = () => {
     <div className={s.container}>
       <div className={s.flex}>
         <div className={s.miniContainer}>
-          <div className={s.logo}>
-            <img
-              className={s.logo}
-              src="././img/FooterLogo.svg"
-              alt="Footer Logo"
-            />
-            <p className={s.title}>DiveSea</p>
+          <div>
+            <a href="#info" className={s.logo}>
+              <img
+                className={s.logo}
+                src="././img/FooterLogo.svg"
+                alt="Footer Logo"
+              />
+              <p className={s.title}>DiveSea</p>
+            </a>
           </div>
           <div className={s.links}>
             {LINKS.map((item, index) => (

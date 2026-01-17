@@ -54,3 +54,30 @@
 .container {
   padding-bottom: 50px;
 }
+
+@media (max-width: 1024px) {
+  .img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .text {
+    font-size: 11px;
+  }
+
+  .miniImg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  .img {
+    width: 190px;
+    height: 190px;
+  }
+}

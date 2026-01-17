@@ -1,27 +1,49 @@
+.container,
+.reverse {
+  display: none;
+}
+
+.link {
+  transition: color 0.3s ease-in-out;
+}
+
+.link:hover {
+  color: black;
+}
+
+.socLink {
+  border-bottom: 1px solid transparent;
+  transition: border 0.3s ease-in-out;
+}
+
+.socLink:hover {
+  color: black;
+  transition: color 0.3s ease-in-out;
+}
+
 @media (max-width: 375px) {
-  .none {
-    display: none;
-  }
-
-  @keyframes container {
-    from {
-      top: -120%;
-    }
-    to {
-      top: 100px;
-    }
-  }
-
   .container {
     position: absolute;
-    top: -120%;
+    display: block;
     padding: 44px 30px 0px 30px;
     border-top: 1px solid black;
     width: 100%;
     background-color: white;
     z-index: 2;
-    animation: container 5s;
-    animation-fill-mode: forwards;
+    transition: top ease 5s;
+    top: 100px;
+    width: 315px;
+  }
+
+  .reverse {
+    position: absolute;
+    display: block;
+    padding: 44px 30px 0px 30px;
+    border-top: 1px solid black;
+    background-color: white;
+    z-index: 2;
+    top: -500px;
+    transition: top ease 5s;
   }
 
   .navItem {
@@ -52,8 +74,4 @@
     margin-top: 44px;
     margin-bottom: 80px;
   }
-}
-
-.none {
-  display: none;
 }

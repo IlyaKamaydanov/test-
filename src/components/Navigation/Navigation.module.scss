@@ -1,6 +1,7 @@
 .container {
   display: flex;
   gap: 66px;
+  align-items: center;
 }
 
 .navItem {
@@ -91,7 +92,6 @@
   .container {
     justify-content: space-between;
     width: 315px;
-    margin-bottom: 72px;
   }
 
   .mobileTitle {

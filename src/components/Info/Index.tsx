@@ -3,7 +3,7 @@ import s from "./Info.module.scss";
 
 const Info = () => {
   return (
-    <div className={s.container}>
+    <div className={s.container} id="info">
       <div className={s.discoverCreate}>
         <div className={s.info}>
           <p className={s.mobileInfo}>
