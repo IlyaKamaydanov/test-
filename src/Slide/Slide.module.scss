@@ -52,7 +52,16 @@
 }
 
 .container {
+  padding-top: 70px;
   padding-bottom: 50px;
+  z-index: 2;
+  transition: top ease 5s;
+  position: absolute;
+  top: 0px;
+}
+
+.container:hover {
+  top: -10px;
 }
 
 @media (max-width: 1024px) {
