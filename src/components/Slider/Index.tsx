@@ -3,7 +3,6 @@ import s from "./Slider.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper as SwiperType } from "swiper";
-// import { Slide } from "../../Slide/Index";
 import { useWindowWidth } from "@react-hook/window-size";
 import axios from "axios";
 import { Slide } from "../../Slide/Index";
@@ -28,54 +27,36 @@ const allIMG: string[] = [];
 
 const Slider = () => {
   const [data, setData] = useState<todosType[]>([]);
-
   for (let i = 0; i < data.length; i++) {
     allIMG.push(...IMG);
   }
 
+  const randomImg = [...allIMG];
+
+  for (let i = randomImg.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [randomImg[i], randomImg[j]] = [randomImg[j], randomImg[i]];
+  }
+
   useEffect(() => {
     const fetchUserData = async () => {
-      // Асинхронная стрелочная функция
       try {
         const response = await axios.get(
           "https://api.coingecko.com/api/v3/nfts/list"
-        ); // await внутри async
+        );
 
         const result = await response.data;
 
         setData(result);
       } catch (error) {
-        console.error(error);
+        console.error;
       }
     };
 
     fetchUserData();
-
-    // const fetchData = async () => {
-    //   try {
-    //     const response = await fetch(
-    //       "https://api.coingecko.com/api/v3/nfts/list"
-    //     );
-    //     if (!response.ok) {
-    //       // Проверяем HTTP-статус
-    //       throw new Error(`HTTP error! status: ${response.status}`);
-    //     }
-    //     const result = await response.json();
-
-    //     setData(result);
-    //     for (let i = 0; i < data.length; i++) {
-    //       allIMG.push(...IMG);
-    //     }
-    //     console.log(data);
-    //   } catch {
-    //     <div>lol</div>;
-    //   }
-    // };
-
-    // fetchData();
   }, []);
-  console.log(data);
-  data.map((item, index) => (item.img = allIMG[index]));
+
+  data.map((item, index) => (item.img = randomImg[index]));
 
   const swiperRef = useRef<SwiperType | null>(null);
 

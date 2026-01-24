@@ -3,11 +3,10 @@
   justify-content: space-between;
   padding: 20px 97px;
   font-family: "Inter", sans-serif;
-
   position: fixed;
   top: 0;
   z-index: 10;
-  width: 100%;
+  width: 1505px;
   box-sizing: border-box;
   background-color: white;
   align-items: center;
@@ -16,11 +15,13 @@
 @media (max-width: 1024px) {
   .container {
     padding: 0 67px;
+    width: 1008px;
   }
 }
 
 @media (max-width: 375px) {
   .container {
     padding: 0 30px;
+    width: 500px;
   }
 }

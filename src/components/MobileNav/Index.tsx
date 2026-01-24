@@ -28,7 +28,7 @@ const SOCIALICONS = [
 
 const MobileNav = ({ show, nav, close }: MobileNavType) => {
   return (
-    <div className={show ? s.container : s.reverse}>
+    <nav className={show ? s.container : s.reverse}>
       <>
         <ul className={s.navItem}>
           {nav.map((item, index) => (
@@ -50,7 +50,7 @@ const MobileNav = ({ show, nav, close }: MobileNavType) => {
         ))}
       </ul>
       <Button variant="mobileExplore" title="Connect Wallet" />
-    </div>
+    </nav>
   );
 };
 

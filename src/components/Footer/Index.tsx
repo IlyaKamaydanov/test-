@@ -16,7 +16,7 @@ const SOCIAL = [
 
 const Footer = () => {
   return (
-    <div className={s.container}>
+    <footer className={s.container}>
       <div className={s.flex}>
         <div className={s.miniContainer}>
           <div>
@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={s.mobileDate}>© 2023 DiveSea All Rights Reserved.</div>
-    </div>
+    </footer>
   );
 };
 

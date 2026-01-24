@@ -55,13 +55,16 @@
   padding-top: 70px;
   padding-bottom: 50px;
   z-index: 2;
-  transition: top ease 5s;
+  transition: top ease 0.5s;
   position: absolute;
   top: 0px;
 }
 
 .container:hover {
-  top: -10px;
+}
+
+.container:hover {
+  top: -20px;
 }
 
 @media (max-width: 1024px) {
