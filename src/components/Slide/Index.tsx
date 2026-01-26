@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Button } from "../components/Button/Index";
+import { Button } from "../Button/Index";
 import s from "./Slide.module.scss";
 
 interface SlideType {

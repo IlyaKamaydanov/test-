@@ -5,7 +5,8 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper as SwiperType } from "swiper";
 import { useWindowWidth } from "@react-hook/window-size";
 import axios from "axios";
-import { Slide } from "../../Slide/Index";
+import { Slide } from "../Slide/Index";
+import { useErrorBoundary } from "react-error-boundary";
 
 interface todosType {
   id?: string;
@@ -38,6 +39,8 @@ const Slider = () => {
     [randomImg[i], randomImg[j]] = [randomImg[j], randomImg[i]];
   }
 
+  const { showBoundary } = useErrorBoundary();
+
   useEffect(() => {
     const fetchUserData = async () => {
       try {
@@ -50,6 +53,7 @@ const Slider = () => {
         setData(result);
       } catch (error) {
         console.error;
+        showBoundary(error);
       }
     };
 
