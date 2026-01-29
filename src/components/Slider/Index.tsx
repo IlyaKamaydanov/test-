@@ -44,11 +44,11 @@ const Slider = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get(
+        const response: { data: todosType[] } = await axios.get(
           "https://api.coingecko.com/api/v3/nfts/list"
         );
 
-        const result = await response.data;
+        const result = response.data;
 
         setData(result);
       } catch (error) {

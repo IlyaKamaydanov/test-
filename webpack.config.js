@@ -21,32 +21,19 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(css)$/, // Обрабатываем .scss и .css
+        test: /\.(css)$/,
         use: [
-          "style-loader", // 3. Инжектирует в DOM (последний в очереди)
+          "style-loader",
           {
             loader: "css-loader",
             options: {
               modules: true,
             },
           },
-          "sass-loader", // 1. Компилирует SCSS -> CSS
+          "sass-loader",
         ],
       },
-      // {
-      //   test: /\.css$/,
-      //   exclude: /node_modules/,
-      //   use: [
-      //     { loader: "style-loader" },
-      //     {
-      //       loader: "css-loader",
-      //       options: {
-      //         modules: true,
-      //       },
-      //     },
-      //     { loader: "sass-loader" },
-      //   ],
-      // },
+
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
